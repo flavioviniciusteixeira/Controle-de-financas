@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Nova Função para Confetes ---
-    const coresConfete = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+    const coresConfete = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff','#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff','#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff','#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
     function triggerConfetti() {
         // Limpa confetes anteriores se houver
