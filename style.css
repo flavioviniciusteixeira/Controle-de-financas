@@ -1,0 +1,158 @@
+   
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(kelly-sikkema-xoU52jUVUXA-unsplash.jpg);
+    background-position: center;
+    background-size: cover; 
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px; 
+}
+.titulo{
+    text-align: center;
+    
+    
+}
+.salario-section{
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 0px #00000094;
+    background-color: rgba(83, 80, 76, 0.377);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 3%;  
+}
+
+
+#salarioInput{
+    width: 50%;
+}
+
+input, button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 55%;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;  
+}
+
+.gastos-section{
+     border-radius: 15px;
+    box-shadow: 0px 0px 5px 0px #00000094;
+    background-color: rgba(83, 80, 76, 0.377);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+#adicionarGastoBtn{
+    background-color: #ef4444;
+}
+
+#adicionarGastoBtn:hover{
+    background-color: #f51f1f;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #e9e9e9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    width:400px ;
+    align-items: center;   
+}
+
+.remover-gasto{
+    margin: 0 auto;
+    width: 30%;
+    margin-right: 20px;
+}
+
+.resumo-section{
+     border-radius: 15px;
+    box-shadow: 0px 0px 5px 0px #00000094;
+    background-color:rgba(83, 80, 76, 0.377); ;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    margin-top: 3% ;
+}
+.investimento-section{
+    text-align: center;
+}
+
+/* ... (Seu CSS existente) ... */
+
+/* Estilos para o contêiner de confetes */
+#confetti-container {
+    position: fixed; /* Fixa o contêiner na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite interagir com elementos por baixo */
+    overflow: hidden; /* Garante que os confetes não passem das bordas */
+    z-index: 9999; /* Garante que os confetes fiquem por cima de tudo */
+}
+
+/* Estilo de cada confete */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--confetti-color); /* A cor será definida via JS */
+    border-radius: 50%; /* Confetes redondos */
+    opacity: 0; /* Começam invisíveis */
+    animation: explodeConfetti 3s forwards ease-out; /* Animação principal */
+}
+
+/* Keyframes da animação de explosão */
+@keyframes explodeConfetti {
+    0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 1;
+        
+    }
+    10% {
+        transform: translate(var(--x-start), var(--y-start)) scale(1); /* Posição inicial da "explosão" */
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x-end), var(--y-end)) rotate(var(--rotate-end)) scale(0.5); /* Posição final da queda/espalhamento */
+        opacity: 0;
+    }
+}

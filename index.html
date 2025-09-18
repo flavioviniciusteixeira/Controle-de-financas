@@ -1,49 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de Gastos Mensais</title>
-       <script src="https://cdn.tailwindcss.com"></script>
-       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Controle de Finanças</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="controle-gasto">
-            Controle de Gastos Mensais
-        </h1>
-        <p class="registrar-salario">
-            Registre seu salário e seus gastos para ter total controle das suas finaças.
-        </p>
+        <h1 class="titulo">Finanças Pessoais</h1>
 
-        <!-- Seção de entrada de salário -->
-         <div class="entrada-salario">
-            <h2 class="salario">
-                Salário Mensal
-            </h2>
+        <section class="salario-section">
+            <h2 class="salario">Salário Mensal</h2>
+            <input type="number" id="salarioInput" placeholder="Digite seu salário mensal">
+            <button id="salvarSalarioBtn">Salvar Salário</button>
+        </section>
 
-            <div class="item">
-                <div class="input">
-                    <label for="salario" class="block"> Valor do Salário (R$)</label>
-                    <input type="number" name="salario" id="salario" placeholder="Ex:5000" class="w-full">
-                </div>
-            </div>
-         </div>
+        <section class="gastos-section">
+            <h2>Adicionar Gastos</h2>
+            <input type="text" id="gastoNomeInput" placeholder="Nome do gasto (ex: Aluguel)">
+            <input type="number" id="gastoValorInput" placeholder="Valor do gasto">
+            <button id="adicionarGastoBtn">Adicionar Gasto</button>
+            
+            <ul id="listaDeGastos"></ul>
+        </section>
 
-         <!-- seção de registro de gastos -->
-          <div class="entrada-gasto">
-            <h2 class="registrar-gasto">
-                Registrar Gastos
-            </h2>
-
-            <div id="gastos-container" class="space">
-                <!-- modelo de gasto dinâmico -->
-            </div>
-            <button onclick="adicionarGasto()" class="btn-primario">Adicionar Novo Gasto</button>
-          </div>
-
-          <!-- botão de resumo -->
-           <div class="text"></div>
+        <section class="resumo-section">
+            <h2>Resumo Financeiro</h2>
+            <div id="saldoAtual"></div>
+            <button id="calcularSaldoBtn">Calcular Saldo</button>
+            <div id="saldoFinal"></div>
+        </section>
+        
+        <section class="investimento-section">
+            <h2>Onde Investir?</h2>
+            <div id="sugestaoInvestimento"></div>
+        </section>
     </div>
+    <div id="confetti-container"></div>
+    <script src="script.js"></script>
 </body>
 </html>
